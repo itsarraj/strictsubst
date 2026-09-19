@@ -1,0 +1,23 @@
+[package]
+name = "strictsubst"
+version = "0.1.0"
+edition = "2021"
+description = "A stricter envsubst: fails loud on an unset variable by default instead of silently substituting an empty string, with ${VAR:-default} and ${VAR:?message} support"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/strictsubst"
+readme = "README.md"
+keywords = ["envsubst", "template", "docker", "cli", "config"]
+categories = ["command-line-utilities", "template-engine"]
+
+[lib]
+name = "strictsubst"
+path = "src/lib.rs"
+
+[[bin]]
+name = "strictsubst"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
