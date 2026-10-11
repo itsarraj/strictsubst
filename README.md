@@ -10,6 +10,12 @@ broken config). `envsubst` (from GNU gettext) also isn't installed by
 default on minimal images like `alpine` without pulling in the whole
 `gettext` package for one binary.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
